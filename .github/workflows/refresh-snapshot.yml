@@ -1,0 +1,45 @@
+name: Refresh 3냉연 snapshot
+
+on:
+  schedule:
+    # Daily 09:20 KST (GitHub scheduled runs can start later than the requested time).
+    - cron: "20 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-3cpl-snapshot
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the default branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Refresh public snapshot (contacts are never fetched)
+        run: python3 scripts/refresh_snapshot.py
+        env:
+          PLANT_API_BASE: http://yuharui.duckdns.org:888
+
+      - name: Commit changed data
+        run: |
+          if ! git diff --quiet -- data.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data.json
+            git commit -m "data: refresh 3냉연 snapshot"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          else
+            echo "No snapshot changes."
+          fi

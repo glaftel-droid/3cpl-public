@@ -1,0 +1,104 @@
+{
+  "updated_at": "2026-10-08T06:27:47+00:00",
+  "repairs": [
+    {
+      "facility": "PCM",
+      "repair_type": "CB",
+      "start_date": "2026-10-07",
+      "end_date": "2026-10-07",
+      "content": "8Hr",
+      "status": "pending"
+    },
+    {
+      "facility": "PCM",
+      "repair_type": "SD",
+      "start_date": "2026-10-13",
+      "end_date": "2026-10-13",
+      "content": "13Hr",
+      "status": "pending"
+    },
+    {
+      "facility": "CAL",
+      "repair_type": "CB",
+      "start_date": "2026-10-21",
+      "end_date": "2026-10-21",
+      "content": "15Hr",
+      "status": "pending"
+    },
+    {
+      "facility": "PCM",
+      "repair_type": "CB",
+      "start_date": "2026-10-21",
+      "end_date": "2026-10-21",
+      "content": "8Hr",
+      "status": "pending"
+    },
+    {
+      "facility": "PCM",
+      "repair_type": "Hy-NO",
+      "start_date": "2026-10-22",
+      "end_date": "2026-10-22",
+      "content": "13Hr",
+      "status": "pending"
+    },
+    {
+      "facility": "PCM",
+      "repair_type": "SD",
+      "start_date": "2026-10-28",
+      "end_date": "2026-10-28",
+      "content": "13Hr",
+      "status": "pending"
+    },
+    {
+      "facility": "PCM",
+      "repair_type": "Hy-NO",
+      "start_date": "2026-10-29",
+      "end_date": "2026-10-29",
+      "content": "13Hr",
+      "status": "pending"
+    },
+    {
+      "facility": "PCM",
+      "repair_type": "CB",
+      "start_date": "2026-11-05",
+      "end_date": "2026-11-05",
+      "content": "8Hr",
+      "status": "pending"
+    },
+    {
+      "facility": "CAL",
+      "repair_type": "투자",
+      "start_date": "2026-11-13",
+      "end_date": "2026-11-19",
+      "content": "168Hr",
+      "status": "pending"
+    },
+    {
+      "facility": "PCM",
+      "repair_type": "투자",
+      "start_date": "2026-11-13",
+      "end_date": "2026-11-20",
+      "content": "192Hr",
+      "status": "pending"
+    },
+    {
+      "facility": "CAL",
+      "repair_type": "대수리",
+      "start_date": "2026-11-20",
+      "end_date": "2026-11-27",
+      "content": "192Hr",
+      "status": "pending"
+    },
+    {
+      "facility": "PCM",
+      "repair_type": "대수리",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-27",
+      "content": "168Hr",
+      "status": "pending"
+    }
+  ],
+  "cpl_overrides": {
+    "2026-10-03": "출"
+  }
+}
